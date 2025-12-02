@@ -1,0 +1,15 @@
+---
+import PostCard from "@/components/molecules/PostCard";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { Post } from "@/types/Post";
+import type { MarkdownInstance } from "astro";
+const posts: MarkdownInstance<Post>[] = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true })
+);
+---
+
+<BaseLayout pageTitle="Astro + TailwindCSS">
+  <div class="flex flex-col gap-2 p-6">
+    {posts.map((p) => <PostCard instance={p} />)}
+  </div>
+</BaseLayout>

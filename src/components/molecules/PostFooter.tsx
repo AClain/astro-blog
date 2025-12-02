@@ -1,0 +1,25 @@
+import type { Post } from "@/types/Post";
+
+interface PostFooterProps {
+  post: Post;
+}
+
+const PostFooter = ({ post }: PostFooterProps) => {
+  return (
+    <section className="border-b-3 border-r-8 pt-2 px-4 pb-5 bg-[#756AB6] border-black text-white flex justify-between mb-10 mt-2">
+      <p>The journey continues ...</p>
+      <div>
+        {post.next && (
+          <p>
+            <a href={post.next}>Next part</a>
+          </p>
+        )}
+        <p>
+          <a href={`/tags/${post.tags[0]}`}>Similar posts</a>
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default PostFooter;

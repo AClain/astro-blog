@@ -1,0 +1,49 @@
+---
+layout: "@/layouts/PostLayout.astro"
+slug: "learn-astro-1"
+title: "My First Blog Post"
+description: "This is the first post of my new Astro blog."
+author: "Astro Learner"
+topic: "Astro"
+tags: ["astro", "introduction", "blogging", "learning in public"]
+published_at: 2022-07-01
+next: "learn-astro-2"
+---
+
+import Blockquote from "@/components/atoms/Blockquote.astro";
+import Paragraph from "@/components/atoms/Paragraph.astro";
+import Link from "@/components/atoms/Link.astro";
+import Code from "@/components/atoms/Code.astro";
+import TLDR from "@/components/atoms/TLDR";
+export const components = {
+  blockquote: Blockquote,
+  p: Paragraph,
+  a: Link,
+  code: Code,
+};
+
+<TLDR text="Web design is better with islands. Islands enable to manage how we render dynamic content easily." />
+
+The landscape of [software development](https://en.wikipedia.org/wiki/Software_development) has undergone a seismic shift in 2025. Large language models aren't just tools anymore—they're collaborative partners reshaping how we write code, debug applications, and architect entire systems.
+
+What started as simple code test completion has evolved into something far more profound1. Today's AI systems can understand context, suggest architectural patterns, and even refactor legacy codebases with remarkable accuracy.
+
+> This is a crazy time for developers.
+
+The landscape of `software development` has undergone a seismic shift in 2025. Large language models aren't just tools anymore—they're collaborative partners reshaping how we write code, debug applications, and architect entire systems.
+
+```ts
+interface IslandComponentProps {
+  title: string;
+}
+
+const IslandComponent = ({ title }: IslandComponentProps) => {
+  return (
+    <h1 className=’island-title’>{title}</h1>
+  );
+}
+
+export default IslandComponent;
+```
+
+More boring text about web development and how islands are incredible. The story goes on and on and islands are great again, we should use that everywhere. Islands everywhere. Yes.

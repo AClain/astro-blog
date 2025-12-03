@@ -1,0 +1,63 @@
+---
+const { level, anchor } = Astro.props;
+---
+
+{
+  level === 1 && (
+    <a class="text-5xl lg:text-7xl mt-5 mb-4" href={`#${anchor}`}>
+      <h1 id={anchor}>
+        <slot />
+      </h1>
+    </a>
+  )
+}
+
+{
+  level === 2 && (
+    <a class="text-4xl lg:text-6xl mt-5 mb-4">
+      <h2>
+        <slot />
+      </h2>
+    </a>
+  )
+}
+
+{
+  level === 3 && (
+    <a class="text-3xl lg:text-5xl mt-5 mb-4">
+      <h3>
+        <slot />
+      </h3>
+    </a>
+  )
+}
+
+{
+  level === 4 && (
+    <a class="text-2xl lg:text-4xl mt-5 mb-4">
+      <h4>
+        <slot />
+      </h4>
+    </a>
+  )
+}
+
+{
+  level === 5 && (
+    <a class="text-xl lg:text-3xl mt-5 mb-4">
+      <h5>
+        <slot />
+      </h5>
+    </a>
+  )
+}
+
+{
+  level === 6 && (
+    <a class="text-lg lg:text-2xl mt-5 mb-4">
+      <h6>
+        <slot />
+      </h6>
+    </a>
+  )
+}

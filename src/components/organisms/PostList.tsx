@@ -9,8 +9,8 @@ interface PostListProps {
 const PostList = ({ instances }: PostListProps) => {
   return (
     <section className="flex flex-col gap-6">
-      {instances.map((i: any) => (
-        <PostCard key={i.frontmatter.slug} instance={i} />
+      {instances.map((instance, i) => (
+        <PostCard key={i} instance={instance} />
       ))}
     </section>
   );

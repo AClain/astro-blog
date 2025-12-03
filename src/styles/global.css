@@ -83,6 +83,12 @@
   }
 }
 
+pre,
+pre span,
+code {
+  font-family: "Courier,monospace";
+}
+
 blockquote p {
   margin: 0;
 }

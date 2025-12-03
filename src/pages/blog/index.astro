@@ -4,8 +4,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import type { Post } from "@/types/Post";
 import type { MarkdownInstance } from "astro";
 const posts: MarkdownInstance<Post>[] = Object.values(
-  import.meta.glob("./posts/*.md", { eager: true })
+  import.meta.glob("@/pages/posts/*.mdx", { eager: true })
 );
+console.log(posts);
 ---
 
 <BaseLayout pageTitle="Astro + TailwindCSS">

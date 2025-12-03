@@ -1,14 +1,14 @@
 ---
 import PostFooter from "@/components/molecules/PostFooter";
 import PostHeader from "@/components/molecules/PostHeader";
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter: post } = Astro.props;
 ---
 
 <BaseLayout pageTitle={post.title}>
-    <PostHeader post={post} />
-    <article class="px-8 md:px-10 lg:px-12">
-        <slot />
-    </article>
-    <PostFooter post={post} />
+  <PostHeader post={post} />
+  <article class="px-8 md:px-12 lg:px-48 xl:px-52 max-w-7xl mx-auto">
+    <slot />
+  </article>
+  <PostFooter post={post} />
 </BaseLayout>

@@ -27,7 +27,7 @@ const PostCard = ({ instance }: PostCardProps) => {
         <span>{toReadable(post.published_at)}</span>
       </CardHeader>
       <CardContent>
-        <CardTitle className="text-2xl">{post.title}</CardTitle>
+        <CardTitle className="text-2xl lg:text-4xl">{post.title}</CardTitle>
         <CardDescription>{post.description}</CardDescription>
       </CardContent>
       <CardFooter>

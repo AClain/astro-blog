@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const allPosts = Object.values(
+  import.meta.glob("../posts/*.mdx", { eager: true })
+);
+
+const uniqueTags = [
+  ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
+];
+
+const groupedTags: Record<string, string[]> = uniqueTags.reduce((r, t) => {
+  const firstLetter = t[0].toUpperCase();
+  if (!r[firstLetter]) {
+    r[firstLetter] = [];
+  }
+
+  r[firstLetter].push(t);
+  return r;
+}, []);
+
+const keys = Object.keys(groupedTags);
+
+keys.sort();
+
+let sortedGroupedTags: Record<string, string[]> = {};
+
+for (let i = 0; i < keys.length; i++) {
+  const k = keys[i];
+  sortedGroupedTags[k] = groupedTags[k];
+}
+---
+
+<BaseLayout pageTitle="Discover">
+  <div class="px-6 mb-4">
+    <h1 class="text-3xl mb-4">#Discover</h1>
+    {
+      Object.keys(sortedGroupedTags).map((letter) => (
+        <section>
+          <h1 class="mt-4 text-2xl lg:text-4xl text-white border-l-4 border-l-black bg-[#756AB6] pl-2">
+            {letter.toUpperCase()}
+          </h1>
+          {sortedGroupedTags[letter].map((tag) => (
+            <a class="ml-4 w-fit" href={`/tags/${tag}`}>
+              #{tag}
+            </a>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

@@ -6,12 +6,17 @@ interface PostFooterProps {
 
 const PostFooter = ({ post }: PostFooterProps) => {
   return (
-    <section className="border-b-3 border-r-8 pt-2 px-4 pb-5 bg-[#756AB6] border-black text-white flex justify-between mb-10 mt-2">
+    <section className="border-b-3 border-r-8 pt-2 px-8 md:px-12 lg:px-48 xl:px-92 pb-5 bg-[#756AB6] border-black text-white flex justify-between mb-10 mt-10">
       <p>The journey continues ...</p>
       <div>
         {post.next && (
           <p>
             <a href={post.next}>Next part</a>
+          </p>
+        )}
+        {post.previous && (
+          <p>
+            <a href={post.previous}>Previous part</a>
           </p>
         )}
         <p>

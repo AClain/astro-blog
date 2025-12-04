@@ -2,48 +2,14 @@
 layout: "@/layouts/PostLayout.astro"
 title: "How to Use Git?"
 description: "This is the first tutorial on how to use Git."
-author: "Romain Mularczik"
+author: "Romain Mularczyk"
 topic: "Git"
 tags: ["git", "learn", "introduction"]
 published_at: 2024-12-02
 next: "learn-git-advanced"
 ---
 
-import Blockquote from "@/components/atoms/Blockquote.astro";
-import Code from "@/components/atoms/Code.astro";
-import Heading from "@/components/atoms/Heading.astro";
-import InlineCode from "@/components/atoms/InlineCode";
-import Link from "@/components/atoms/Link.astro";
-import Paragraph from "@/components/atoms/Paragraph.astro";
-import TLDR from "@/components/atoms/TLDR";
-export const components = {
-  blockquote: Blockquote,
-  p: Paragraph,
-  a: Link,
-  code: Code,
-  h1(props) {
-    return <Heading level={1} anchor={props.children} {...props} />;
-  },
-  h2(props) {
-    return <Heading level={2} {...props} />;
-  },
-  h3(props) {
-    return <Heading level={3} {...props} />;
-  },
-  h4(props) {
-    return <Heading level={4} {...props} />;
-  },
-  h5(props) {
-    return <Heading level={5} {...props} />;
-  },
-  h6(props) {
-    return <Heading level={6} {...props} />;
-  },
-};
-
-<TLDR text="This tutorial explains how to import a new project into Git, make changes to it, and share changes with other developers." />
-
-First, note that you can get documentation for a command such as <InlineCode>git log --graph</InlineCode> with:
+First, note that you can get documentation for a command such as `git log --graph` with:
 
 ```shell
 $ man git-log
@@ -66,7 +32,7 @@ $ git config --global user.email you@yourdomain.example.com
 
 # Importing a new project
 
-Assume you have a tarball <InlineCode>project.tar.gz</InlineCode> with your initial work. You can place it under Git revision control as follows.
+Assume you have a tarball `project.tar.gz` with your initial work. You can place it under Git revision control as follows.
 
 ```shell
 $ tar xzf project.tar.gz
@@ -80,15 +46,15 @@ Git will reply
 Initialized empty Git repository in .git/
 ```
 
-You've now initialized the working directory—you may notice a new directory created, named <InlineCode>.git</InlineCode>.
+You've now initialized the working directory—you may notice a new directory created, named `.git`.
 
-Next, tell Git to take a snapshot of the contents of all files under the current directory (note the <InlineCode>.</InlineCode>), with <InlineCode>git add</InlineCode>:
+Next, tell Git to take a snapshot of the contents of all files under the current directory (note the `.`), with `git add`:
 
 ```shell
 $ git add .
 ```
 
-This snapshot is now stored in a temporary staging area which Git calls the "index". You can permanently store the contents of the index in the repository with <InlineCode>git commit</InlineCode>:
+This snapshot is now stored in a temporary staging area which Git calls the "index". You can permanently store the contents of the index in the repository with `git commit`:
 
 ```shell
 $ git commit
@@ -104,7 +70,7 @@ Modify some files, then add their updated contents to the index:
 $ git add file1 file2 file3
 ```
 
-You are now ready to commit. You can see what is about to be committed using <InlineCode>git diff</InlineCode> with the <InlineCode>--cached</InlineCode> option:
+You are now ready to commit. You can see what is about to be committed using `git diff` with the `--cached` option:
 
 ```shell
 $ git status
@@ -125,7 +91,7 @@ $ git commit
 
 This will again prompt you for a message describing the change, and then record a new version of the project.
 
-Alternatively, instead of running <InlineCode>git add</InlineCode> beforehand, you can use
+Alternatively, instead of running `git add` beforehand, you can use
 
 ```shell
 $ git commit -a
@@ -137,7 +103,7 @@ A note on commit messages: Though not required, it's a good idea to begin the co
 
 ## Git tracks content not files
 
-Many revision control systems provide an <InlineCode>add</InlineCode> command that tells the system to start tracking changes to a new file. Git's <InlineCode>add</InlineCode> command does something simpler and more powerful: <InlineCode>git add</InlineCode> is used both for new and newly modified files, and in both cases it takes a snapshot of the given files and stages that content in the index, ready for inclusion in the next commit**.**
+Many revision control systems provide an `add` command that tells the system to start tracking changes to a new file. Git's `add` command does something simpler and more powerful: `git add` is used both for new and newly modified files, and in both cases it takes a snapshot of the given files and stages that content in the index, ready for inclusion in the next commit**.**
 
 # Viewing project history
 
@@ -161,7 +127,7 @@ $ git log --stat --summary
 
 # Managing branches
 
-A single Git repository can maintain multiple branches of development. To create a new branch named <InlineCode>experimental</InlineCode>, use
+A single Git repository can maintain multiple branches of development. To create a new branch named `experimental`, use
 
 ```shell
 $ git branch experimental
@@ -180,13 +146,13 @@ you'll get a list of all existing branches:
 * master
 ```
 
-The <InlineCode>experimental</InlineCode> branch is the one you just created, and the <InlineCode>master</InlineCode> branch is a default branch that was created for you automatically. The asterisk marks the branch you are currently on; type
+The `experimental` branch is the one you just created, and the `master` branch is a default branch that was created for you automatically. The asterisk marks the branch you are currently on; type
 
 ```shell
 $ git switch experimental
 ```
 
-to switch to the <InlineCode>experimental</InlineCode> branch. Now edit a file, commit the change, and switch back to the <InlineCode>master</InlineCode> branch:
+to switch to the `experimental` branch. Now edit a file, commit the change, and switch back to the `master` branch:
 
 ```shell
 # (edit file)
@@ -194,9 +160,9 @@ $ git commit -a
 $ git switch master
 ```
 
-Check that the change you made is no longer visible, since it was made on the <InlineCode>experimental</InlineCode> branch and you're back on the <InlineCode>master</InlineCode> branch.
+Check that the change you made is no longer visible, since it was made on the `experimental` branch and you're back on the `master` branch.
 
-You can make a different change on the <InlineCode>master</InlineCode> branch:
+You can make a different change on the `master` branch:
 
 ```shell
 # (edit file)
@@ -229,15 +195,15 @@ $ gitk
 
 will show a nice graphical representation of the resulting history.
 
-At this point you could delete the <InlineCode>experimental</InlineCode> branch with
+At this point you could delete the `experimental` branch with
 
 ```shell
 $ git branch -d experimental
 ```
 
-This command ensures that the changes in the <InlineCode>experimental</InlineCode> branch are already in the current branch.
+This command ensures that the changes in the `experimental` branch are already in the current branch.
 
-If you develop on a branch <InlineCode>crazy-idea</InlineCode>, then regret it, you can always delete the branch with
+If you develop on a branch `crazy-idea`, then regret it, you can always delete the branch with
 
 ```shell
 $ git branch -D crazy-idea

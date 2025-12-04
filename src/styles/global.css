@@ -64,11 +64,11 @@
   --font-weight-heading: 700;
 }
 
-* {
-  font-family: "Monomaniac One", sans-serif;
-}
-
 @layer base {
+  * {
+    font-family: "Inter", sans-serif;
+  }
+
   body {
     @apply text-foreground font-base bg-background;
   }
@@ -80,15 +80,6 @@
   h5,
   h6 {
     @apply font-heading;
+    font-family: "Monomaniac One", sans-serif;
   }
-}
-
-pre,
-pre span,
-code {
-  font-family: "Courier,monospace";
-}
-
-blockquote p {
-  margin: 0;
 }

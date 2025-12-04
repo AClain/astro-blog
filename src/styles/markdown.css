@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+#article-post {
+  p {
+    @apply my-4;
+
+    code {
+      @apply bg-slate-700 rounded border border-black text-amber-500 px-1 inline lg:text-lg;
+    }
+  }
+
+  pre,
+  pre span,
+  code {
+    font-family: "Courier,monospace";
+  }
+
+  pre {
+    @apply border-l-6 p-4 border-l-[#756AB6];
+  }
+
+  h1 {
+    @apply text-5xl lg:text-7xl mt-5 mb-4;
+  }
+
+  h2 {
+    @apply text-4xl lg:text-6xl mt-5 mb-4;
+  }
+
+  h3 {
+    @apply text-3xl lg:text-5xl mt-5 mb-4;
+  }
+
+  h4 {
+    @apply text-2xl lg:text-4xl mt-5 mb-4;
+  }
+
+  h5 {
+    @apply text-xl lg:text-3xl mt-5 mb-4;
+  }
+
+  h6 {
+    @apply text-lg lg:text-2xl mt-5 mb-4;
+  }
+
+  .katex-html {
+    display: none;
+  }
+
+  math {
+    font-family: KaTeX_Main, Times New Roman, serif !important;
+  }
+}

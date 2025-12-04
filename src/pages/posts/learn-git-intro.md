@@ -21,7 +21,7 @@ or:
 $ git help log
 ```
 
-With the latter, you can use the manual viewer of your choice; see [git-help[1]](https://git-scm.com/docs/git-help) for more information.
+With the latter, you can use the manual viewer of your choice; see [git-help[2]](https://git-scm.com/docs/git-help2) [git-help[1]](https://git-scm.com/docs/git-help) for more information.
 
 It is a good idea to introduce yourself to Git with your name and public email address before doing any operation. The easiest way to do so is:
 

@@ -2,19 +2,21 @@ import { Button } from "../ui/button";
 
 const Header = () => {
   return (
-    <header className="p-4 bg-[#756AB6] flex flex-col gap-3">
+    <header className="p-4 bg-dark-purple flex flex-col gap-3 border-black-purple border-b-6">
       <section>
-        <h1 className="text-4xl text-pink-100 uppercase">Walls</h1>
+        <h1 className="text-4xl text-light-pink uppercase">Walls</h1>
       </section>
       <section className="flex gap-4">
         <a href="/blog">
-          <Button className="rounded-none h-8 px-5">Blog</Button>
+          <Button className="rounded-none h-8 px-5 bg-mid-purple">Blog</Button>
         </a>
         <a href="/team">
-          <Button className="rounded-none h-8 px-5">Team</Button>
+          <Button className="rounded-none h-8 px-5 bg-mid-purple">Team</Button>
         </a>
         <a href="/work-with-us">
-          <Button className="rounded-none h-8 px-5">Work with us</Button>
+          <Button className="rounded-none h-8 px-5 bg-mid-purple">
+            Work with us
+          </Button>
         </a>
       </section>
     </header>

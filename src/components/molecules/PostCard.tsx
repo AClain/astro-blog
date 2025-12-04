@@ -19,7 +19,7 @@ const PostCard = ({ instance }: PostCardProps) => {
   const { frontmatter: post } = instance;
 
   return (
-    <Card className="p-4 flex flex-col gap-2 text-pink-50 bg-[#756AB6] w-full">
+    <Card className="p-4 flex flex-col gap-2 text-pink-50 bg-dark-purple w-full">
       <CardHeader className="flex justify-between">
         <div className="bg-pink-50 text-black border-2 border-fuchsia-300 px-3 text-sm">
           {post.topic.toUpperCase()}

@@ -10,11 +10,11 @@
   }
 
   a {
-    @apply underline text-amber-500;
+    @apply underline text-blue-400 hover:text-blue-600;
   }
 
   a:visited {
-    @apply underline text-amber-700;
+    @apply underline text-custom;
   }
 
   pre,
@@ -24,7 +24,7 @@
   }
 
   pre {
-    @apply border-l-6 p-4 border-l-[#756AB6];
+    @apply border-l-6 p-4 border-l-dark-purple;
   }
 
   h1 {

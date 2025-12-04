@@ -54,6 +54,12 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
+  --color-black-purple: #2b2743;
+  --color-dark-purple: #756ab6;
+  --color-white-pink: #f9efef;
+  --color-mid-purple: #ac87c5;
+  --color-light-pink: #ffe5e5;
+
   --spacing-boxShadowX: 4px;
   --spacing-boxShadowY: 4px;
   --spacing-reverseBoxShadowX: -4px;

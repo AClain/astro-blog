@@ -9,6 +9,14 @@
     }
   }
 
+  a {
+    @apply underline text-amber-500;
+  }
+
+  a:visited {
+    @apply underline text-amber-700;
+  }
+
   pre,
   pre span,
   code {
